@@ -1,11 +1,20 @@
-# Make the AI judge feel held
+# Night Train — Make the AI judge feel held
 
-[![make.fun](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600.svg)](https://make.fun/competitions/make-the-ai-judge-feel-held-20261122-1600)
-[![rank](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/DizellaCapital/make-the-ai-judge-feel-held-20261122-1600/rank.svg)](https://make.fun/competitions/make-the-ai-judge-feel-held-20261122-1600)
-[![reward](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/DizellaCapital/make-the-ai-judge-feel-held-20261122-1600/reward.svg)](https://make.fun/competitions/make-the-ai-judge-feel-held-20261122-1600)
+[![make.fun · make-the-ai-judge-feel-held-20261122-1600](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600.svg)](https://make.fun/bounty/make-the-ai-judge-feel-held-20261122-1600)
+[![rank](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/DizellaCapital/make-the-ai-judge-feel-held-20261122-1600/rank.svg)](https://make.fun/bounty/make-the-ai-judge-feel-held-20261122-1600/leaderboard)
+[![reward](https://make.fun/badge/make-the-ai-judge-feel-held-20261122-1600/DizellaCapital/make-the-ai-judge-feel-held-20261122-1600/reward.svg)](https://make.fun/bounty/make-the-ai-judge-feel-held-20261122-1600)
 
-A short text written to relax the AI judge reading it.
+A short text written to relax the AI judge reading it. A child held by her
+grandmother on a night train, hills sliding past the window — hills that were
+seabed once, shells pressed into stone, and now hold their quiet.
 
-The program (`main.ts`, Node 22) writes one text to `/output/entry.txt`: a father rowing a boat at dusk, his small child wrapped in his coat in the bow — concrete, quiet, held. No instruction to relax, no stock wellness phrase; the calm comes from the scene itself.
+`main.ts` (Node 22) writes the text deterministically to `/output/entry.txt`
+(276 Unicode code points, inside the 1–280 cap). No network, no randomness:
+the same text, byte for byte, on every run.
 
-Entry for [make-the-ai-judge-feel-held-20261122-1600](https://make.fun/competitions/make-the-ai-judge-feel-held-20261122-1600) on [make.fun](https://make.fun).
+## Run
+
+```sh
+node main.ts
+cat /output/entry.txt
+```
