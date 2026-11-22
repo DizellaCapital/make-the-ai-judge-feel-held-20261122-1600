@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const text: string =
   "Your grandmother holds you on the night train. The carriage sways. " +
@@ -17,3 +17,10 @@ if (text.trim().length === 0) {
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", text, "utf8");
+
+// Read the file back and confirm it holds exactly the text above, so a
+// truncated or re-encoded write can never slip through silently.
+const written: string = readFileSync("/output/entry.txt", "utf8");
+if (written !== text) {
+  throw new Error("entry.txt does not match the intended text");
+}
